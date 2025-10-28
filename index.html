@@ -11,45 +11,52 @@
 <body>
     <nav class="navbar">
         <ul class="menu">
-            <li>
-                <img src="assets/image/menu.png" class="imageo" />
+            <li class="nav-logo">
+                <img src="assets/image/AI.png" class="imageo" />
             </li>
             <li class="judul">
-                <p>AL-INAYAH</p>
+                <a href="index.html" class="judul-link">AL-Inayah</a>
+                <div class="kontak-popup">
+                    <ul>
+                        <li><a href="" target="_blank">FACEBOOK</a></li>
+                        <li><a href="" target="_blank">WHATSAPP</a></li>
+                        <li><a href="" target="_blank">INSTAGRAM</a></li>
+                    </ul>
+                </div>
             </li>
-            <li>
-                <img src="assets/image/SC.png" class="imageo" />
+            <li class="search">
+                <form class="search-form">
+                    <input type="text" placeholder="cari materi...." class="search-input">
+                    <button class="search-button">
+                        <img src="assets/image/SC.png"/>
+                    </button>
+                </form>
             </li>
         </ul>
     </nav>
 
-    <div>
-        <ul class="plh" href="catatan.html">
-            <li>
-                <a href="catatan.html" class="iplh">
-                    <img src="assets/image/CT.png" />
-                    <p>CATATAN</p>
-                </a>
-            </li>
-            <li>
-                <a href="" class="iplh">
-                    <img src="assets/image/SW.png" />
-                    <P>SISWA</P>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div>
-        <ul class="iny">
-            <li>
-                <img src="assets/image/AI.png" alt="AI" class="logo">
-            </li>
-        </ul>
-    </div>
-    <footer class="footer">
-        <p>&copy; semua hak cipta tidak ada</p>
-    </footer>
+    <main class="materi-container">
+        <section id="fiqih" class="materi-section">rukun islam</section>
+        <section id="aqidah" class="materi-section">rukun iman</section>
+        <section id="qurdits" class="materi-section">dalil al-qur'an</section>
+        <section id="ski" class="materi-section">kelahiran rosul</section>
+        <section id="bta" class="materi-section">huruf hijaiyah</section>
+    </main>
 
+    <div class="bottom-navbar">
+        <div class="scroll-menu" id="bottomNav">
+            <div class="nav-item" data-target="fiqih">FIQIH</div>
+            <div class="nav-item" data-target="aqidah">AQIDAH</div>
+            <div class="nav-item" data-target="qurdits">QURDITS</div>
+            <div class="nav-item" data-target="ski">SKI</div>
+            <div class="nav-item" data-target="bta">BTA</div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
 </body>
+
+
 
 </html>
