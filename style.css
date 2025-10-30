@@ -3,6 +3,16 @@
    padding: 0;
    box-sizing: border-box;
 }
+
+@font-face {
+   font-family: khodijah free;
+   src: url(assets/font/khodijah_free-webfont.woff2) format('woff2'),
+      url(assets/font/khodijah_free-webfont.woff) format('woff'),
+      url(assets/font/Khodijah\ Free.ttf) format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
 .navbar {
    position: sticky;
    top: 0;
@@ -76,7 +86,7 @@
    filter: drop-shadow(0 0 4px #00fff7);
 }
 
-.kontak-popup{
+.kontak-popup {
    display: none;
 }
 
@@ -90,6 +100,7 @@
    font-size: 18px;
    color: #4b0713;
 }
+
 .bottom-navbar {
    position: fixed;
    bottom: 0;
@@ -100,6 +111,7 @@
    z-index: 999;
    overflow-x: auto;
 }
+
 .scroll-menu {
    display: flex;
    overflow-x: auto;
@@ -108,6 +120,7 @@
    padding: 10px;
    gap: 16px;
 }
+
 .nav-item {
    flex: 0 0 auto;
    scroll-snap-align: center;
@@ -117,16 +130,19 @@
    font-weight: bold;
    cursor: pointer;
    white-space: nowrap;
-   transition: background 0.3s ease, 0.3s color ease ;
+   transition: background 0.3s ease, 0.3s color ease;
 }
+
 .nav-item.active {
-  background-color: #FFD700;
-  color: #1A1A2E;
+   background-color: #FFD700;
+   color: #1A1A2E;
 }
+
 @media (max-width: 768px) {
    .navbar {
       overflow-x: hidden;
    }
+
    .menu {
       display: flex;
       flex-direction: row;
@@ -134,14 +150,17 @@
       align-items: center;
       flex-wrap: wrap;
    }
+
    .imageo {
       display: none;
    }
+
    .judul {
       flex: 1;
       display: flex;
       justify-content: flex-start;
    }
+
    .search {
       flex: 2;
       display: flex;
