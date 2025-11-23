@@ -4,6 +4,8 @@
    box-sizing: border-box;
 }
 
+
+
 @font-face {
    font-family: khodijah free;
    src: url(assets/font/khodijah_free-webfont.woff2) format('woff2'),
@@ -13,6 +15,7 @@
    font-style: normal;
 }
 
+/* navbar-top */
 .navbar {
    position: sticky;
    top: 0;
@@ -86,10 +89,7 @@
    filter: drop-shadow(0 0 4px #00fff7);
 }
 
-.kontak-popup {
-   display: none;
-}
-
+/* materi-item */
 .materi-container {
    padding-bottom: 80px;
 }
@@ -101,12 +101,25 @@
    color: #4b0713;
 }
 
+.judul-materi {
+   font-size: 24px;
+   margin-bottom: 16px;
+}
+
+.pengertian h3,
+.rukun-islam h3 {
+   font-size: 20px;
+   margin-bottom: 8px;
+}
+
+
+/* navbar-bottom */
 .bottom-navbar {
    position: fixed;
    bottom: 0;
    left: 0;
    width: 100%;
-   background-color: #1a1a2e;
+   background-color: #4f6f52;
    box-shadow: 0 -2px 6px rgba(0, 255, 255, 0.2);
    z-index: 999;
    overflow-x: auto;
@@ -125,7 +138,7 @@
    flex: 0 0 auto;
    scroll-snap-align: center;
    padding: 10px 20px;
-   background-color: #0f3460;
+   background-color: #33b03f;
    border-radius: 20px;
    font-weight: bold;
    cursor: pointer;
@@ -138,6 +151,7 @@
    color: #1A1A2E;
 }
 
+/* ponsel */
 @media (max-width: 768px) {
    .navbar {
       overflow-x: hidden;

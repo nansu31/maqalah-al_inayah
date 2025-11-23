@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>landing</title>
     <link rel="stylesheet" href="style.css" />
+    <script type="module" src="firebase.js"></script>
 </head>
 
 <body>
@@ -16,13 +17,6 @@
             </li>
             <li class="judul">
                 <a href="index.html" class="judul-link">AL-Inayah</a>
-                <div class="kontak-popup">
-                    <ul>
-                        <li><a href="" target="_blank">FACEBOOK</a></li>
-                        <li><a href="" target="_blank">WHATSAPP</a></li>
-                        <li><a href="" target="_blank">INSTAGRAM</a></li>
-                    </ul>
-                </div>
             </li>
             <li class="search">
                 <form class="search-form">
@@ -36,7 +30,34 @@
     </nav>
 
     <main class="materi-container">
-        <section id="fiqih" class="materi-section">rukun islam</section>
+         <h1>Tambah Materi</h1>
+  <form id="materiForm">
+    <input type="text" id="judul" placeholder="Judul materi" required>
+    <textarea id="isi" placeholder="Isi materi" required></textarea>
+    <button type="submit">Simpan</button>
+  </form>
+
+  <h2>Daftar Materi</h2>
+  <ul id="daftarMateri"></ul>
+        <section id="fiqih" class="materi-section">
+            <h2 class="judul-materi">Fiqih</h2>
+            <div class="pengertian">
+                <h3>fiqih adalah</h3>
+            </div>
+            <div class="rukun-islam">
+                <h3>Rukun Islam</h3>
+                <ul class="submateri-list">
+                    <li><a href="">syahadat</a></li>
+                    <li><a href="">solat</a></li>
+                    <li><a href="">zakat</a></li>
+                    <li><a href="">puasa</a></li>
+                    <li><a href="">haji</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3><a href="kemasyarakatan.html">kemasyarakatan</a></h3>
+            </div>
+        </section>
         <section id="aqidah" class="materi-section">rukun iman</section>
         <section id="qurdits" class="materi-section">dalil al-qur'an</section>
         <section id="ski" class="materi-section">kelahiran rosul</section>
