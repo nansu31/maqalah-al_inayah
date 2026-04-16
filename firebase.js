@@ -22,9 +22,16 @@ const provider = new GoogleAuthProvider();
 
 // Login dengan Google
 document.getElementById("loginBtn").addEventListener("click", async () => {
-  await signInWithPopup(auth, provider);
-  alert("Login berhasil sebagai " + auth.currentUser.email);
+  try {
+    const result = await signInWithPopup(auth, provider);
+    const user = result.user;
+    alert("Login berhasil sebagai " + user.email);
+  } catch (error) {
+    console.error("Error login:", error);
+    alert("Login gagal: " + error.message);
+  }
 });
+
 
 // Form submit → simpan data
 document.getElementById("materiForm").addEventListener("submit", async (e) => {
@@ -41,6 +48,15 @@ document.getElementById("materiForm").addEventListener("submit", async (e) => {
   }
 });
 
+// Edit data
+async function editData(id, judulBaru, isiBaru) {
+  const docRef = doc(db, "materi", id);
+  await updateDoc(docRef, { judul: judulBaru, isi: isiBaru });
+  tampilkanData();
+}
+
+
+
 // Fungsi baca data
 async function tampilkanData() {
   const daftar = document.getElementById("daftarMateri");
@@ -50,8 +66,21 @@ async function tampilkanData() {
     const li = document.createElement("li");
     li.textContent = doc.data().judul + " - " + doc.data().isi;
     daftar.appendChild(li);
+
+    const editBtn = document.createElement("button");
+    editBtn.textContent = "Edit";
+    editBtn.onclick = () => {
+      const judulBaru = prompt("Judul baru:", docSnap.data().judul);
+      const isiBaru = prompt("Isi baru:", docSnap.data().isi);
+      if (judulBaru && isiBaru) {
+        editData(docSnap.id, judulBaru, isiBaru);
+      }
+    };
+    li.appendChild(editBtn);
   });
 }
+
+
 
 // Panggil saat pertama kali load
 tampilkanData();
